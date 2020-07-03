@@ -1,0 +1,197 @@
+.icons{
+    width: 20px;
+    /* height: 30px; */
+}
+.icon{
+  width: 100px;
+}
+.navbar{
+    text-transform:uppercase;
+    overflow: hidden;
+    
+    font-weight: 700 !important;
+    font-size: .9rem !important;
+    letter-spacing: .1rem !important;
+    background:rgba(0, 0, 0, 0.0) !important;
+}
+.navbar a:hover {
+  border-bottom: 3px solid crimson;
+}
+
+.navbar a.active {
+  border-bottom: 3px solid crimson;
+}
+
+.navbar-nav li{
+    padding-right: .7rem !important;
+
+
+}
+
+.navbar-dark .navbar-nav .nav-link{
+    color:black !important;
+    padding-top: .8rem !important;
+}
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link:hover{
+    color:crimson !important;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+.section-padding{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.section{
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.scroll .hero {
+    transform: scale(0.98);
+  }
+   
+  .hero {
+    /* background-attachment: fixed; */
+    transition: transform 0.5s ease-in-out;
+  }
+   
+  .cForm{
+    background-color:rgba(0, 0, 0, 0.8);
+    
+  }
+   
+ .btn{
+  border-radius: 40px;
+  background-color:rgb(177, 64, 87) !important;
+
+}
+  .caveat{
+    /* font-weight: bold; */
+    color: crimson;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    /* background: linear-gradient(
+      rgba(0, 0, 0, 0.5) 0,
+      rgba(0, 0, 0, 0.3) 50%,
+      rgba(0, 0, 0, 0.1) 100%
+    ); */
+  }
+   
+  .hero .container-fluid {
+    z-index: 10;
+  }
+.colour{
+    background-color: light grey !important;
+}
+.bg_image{
+    background-image: url('img/carousel/fish6.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.bg_image_col{
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.bg_color{
+    background-color:rgb(243, 242, 242);
+}
+.btn{
+      background-color:rgb(170, 162, 77);
+}
+.color{
+    background-color:crimson;
+}
+.colorr{
+    background-color: rgb(177, 64, 87) !important;
+}
+.scroll .hero0 {
+    transform: scale(0.98);
+  }
+   
+  .hero {
+    background-attachment: fixed;
+    transition: transform 0.5s ease-in-out;
+  }
+   
+  .hero0::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.5) 0,
+      rgba(0, 0, 0, 0.5) 50%,
+      rgba(0, 0, 0, 0.5) 100%
+    );
+  }
+  .ra::after{
+      position: absolute;
+  }
+   
+  .hr{
+      background-color: crimson;
+      width: 40px;
+      height:1px;
+  }
+  .hrr{
+    background-color:rgb(170, 162, 77);
+    width: 60px;
+    /* height:1px; */
+}
+  .hero0 .container-fluid {
+    z-index: 10;
+  }
+  .background_contact{
+    background-image: url('img/product-bg.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .modal-content{
+    background-image: url('img/product-bg.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  #myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color:rgba(0, 0, 0, 0.3); /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding-top: 10px; /* Some padding */
+    padding-bottom: 5px;
+    padding-right: 15px;
+    padding-left: 15px;
+
+    font-size: 15px; /* Increase font size */
+  }
+  
+  #myBtn:hover {
+    background-color:crimson; /* Add a dark-grey background on hover */
+  }
+  @media only screen and (max-width:768px){
+    .card{
+      margin-top: 20px;
+    }
+    #toggleButton{
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+  }
