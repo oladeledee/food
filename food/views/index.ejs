@@ -234,7 +234,7 @@
 
                       </div>
                       <!-- Default form register -->
-                      <form class="text-center border border-light p-5" action="#!" onkeyup="add_invoice()" >
+                      <form class="text-center border border-light p-5" action="#!">
 
                           <div class="form-row mb-4">
                               <div class="col">
@@ -254,7 +254,7 @@
                               placeholder="Phone Number">
 
                           <!-- quantity -->
-                          <input type="text" id="qu1" name="qu1" class="form-control mb-4" onkeypress="console.log('i got here')"
+                          <input type="text" id="qu1" name="qu1" class="form-control mb-4" onkeypress="add_invoice()"
                               placeholder="Quantity" aria-describedby="defaultRegisterFormPasswordHelpBlock"  >
 
 
@@ -492,6 +492,8 @@ new WOW().init();
 </script>
 <script type="text/javascript">
   function add_invoice(){
+  const _q1 = document.getElementById("qu1").value;
+  console.log(`Quantity check ${_q1}`);
     var q1 =parseInt(document.getElementById("qu1").nodeValue);
     var p1 = parseInt(document.getElementById("p1").nodeValue);
     var rs= q1*p1;
