@@ -15,9 +15,16 @@
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <!-- Material Design Bootstrap -->
   <link rel="stylesheet" href="css/mdb.min.css">
+
+  <script src="/js/bootstrap.min.js"></script>    
+    <script src="/js/bootstrap.js"></script>
+    <script src="/js/jquery.js"></script>    
+    <script src="/js/bootstrap.js"></script>
+    
  
   <!-- Your custom styles (optional) -->
   <link rel="stylesheet" href="css/style.css">
+  <script scr='http://ajax.aspnetcdn.com/ajax/jquery/jquery-3.2.1.js'></script>
   <link rel="stylesheet" href="main.css">
 </head>
 <body style="font-family: 'Montserrat', sans-serif;">
@@ -48,7 +55,7 @@
 
     <div class="collapse navbar-collapse" id="navbarResponsive">
         <a class="navbar-brand" href="#">
-            <img src="img/logo.png" class="d-inline-block align-top" alt="">
+            <img src=""  class="d-inline-block align-top" alt="">
             <!-- Bootstrap -->
           </a>
       <ul class="navbar-nav ml-auto">
@@ -163,7 +170,7 @@
       
               <h4 class="font-weight-bold card-title">CatFish</h4>
              
-              <a class="btn" data-toggle="modal" data-target="#myModal">Order</a>
+              <a class="btn" data-toggle="modal" data-target="#myCAT">Order</a>
             </div>
             </div>
         </div>
@@ -179,7 +186,7 @@
       
               <h4 class="font-weight-bold card-title">Kote</h4>
              
-              <a class="btn" data-toggle="modal" data-target="#myModal">Order</a>
+              <a class="btn" data-toggle="modal" data-target="#myKOTE">Order</a>
             </div>
             </div>
         </div>
@@ -195,7 +202,7 @@
       
               <h4 class="font-weight-bold card-title">Shawa</h4>
              
-              <a class="btn" data-toggle="modal" data-target="#myModal">Order</a>
+              <a class="btn" data-toggle="modal" data-target="#mySHAWA">Order</a>
             </div>
             </div>
         </div>
@@ -234,7 +241,7 @@
 
                       </div>
                       <!-- Default form register -->
-                      <form class="text-center border border-light p-5" action="#!" onkeyup="add_invoice()" >
+                      <form class="text-center border border-light p-5" action="#cartModal"  >
 
                           <div class="form-row mb-4">
                               <div class="col">
@@ -254,21 +261,22 @@
                               placeholder="Phone Number">
 
                           <!-- quantity -->
-                          <input type="text" id="qu1" name="qu1" class="form-control mb-4" onkeypress="console.log('i got here')"
-                              placeholder="Quantity" aria-describedby="defaultRegisterFormPasswordHelpBlock"  >
+                          <input type="number" id="qu1" name="qu1" class="form-control mb-4" >
 
 
                           <!-- price -->
                           <input type="text" id="p1" class="form-control mb-4" name="p1"
-                              placeholder="Price" value="500" aria-describedby="defaultRegisterFormPhoneHelpBlock" readonly>
+                              placeholder="Price" value="800 per kilo"  aria-describedby="defaultRegisterFormPhoneHelpBlock" readonly>
                              
                               <input type="text" id="result" class="form-control"  name="result"
+                              
                               placeholder="TOTAL COST" aria-describedby="defaultRegisterFormPhoneHelpBlock" readonly>
 
-                             
+                            
+                                 
 
                           <!-- Sign up button -->
-                          <button class="btn my-4 text-white color btn-block" type="submit">Order</button>
+                          <button class="btn my-4 text-white color btn-block"   type="submit">Order</button>
                           <hr style="background-color: white !important;">
                           <!-- Social register -->    
                           <a href="#" class="mx-2" role="button"><i class="fab fa-facebook-f light-blue-text"></i></a>
@@ -279,17 +287,395 @@
                         
 
                       </form>
-                      <!-- Default form register -->
+
+                    </div>
                   </div>
               </div>
+              <div class="modal-footer">
+                <button type="button" class="btn text-white" data-dismiss="modal">Close</button>
+                <button type="button" class="btn text-white" data-toggle="modal" data-target="#add" name="btn1">Save changes</button>
+            </div>
+        </div>
+    </div>
+  </div>
+  
+                  
+                      
+  <div class="modal fade" id="myCAT" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+  aria-hidden="true">
+
+  <!-- Add .modal-dialog-centered to .modal-dialog to vertically center the modal -->
+  <div class="modal-dialog modal-dialog-centered" role="document">
+
+
+      <div class="modal-content">
+          <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
           </div>
-          <div class="modal-footer">
-              <button type="button" class="btn text-white" data-dismiss="modal">Close</button>
-              <button type="button" class="btn text-white" name="btn1">Save changes</button>
+                      <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-8 col-md-8 mx-auto  text-white text-center">
+                                    <h3 class="text-white text-bold">MD Fish</h3>
+                                    <img src="img/about/line.png" alt="" class="img-fluid">
+                                    <p class="text-white">LIVE WITH IT</p>
+                                    <p>order for...</p>
+                                    <h3 id="nameChange">CAT FISH</h3>
+          
+                                </div>
+                                <!-- Default form register -->
+                                <form   class="text-center border border-light p-5" action="cartModal"  >
+          
+                                    <div class="form-row mb-4">
+                                        <div class="col">
+                                            <!-- First name -->
+                                            <input type="text" id="defaultRegisterFormFirstName"  name="firstname" class="form-control"
+                                                placeholder="First name">
+                                        </div>
+                                        <div class="col">
+                                            <!-- Last name -->
+                                            <input type="text" id="defaultRegisterFormLastName" name="lastname" class="form-control"
+                                                placeholder="Last name">
+                                        </div>
+                                    </div>
+          
+                                    <!-- mobile number -->
+                                    <input type="text" id="defaultRegisterPhonePassword" name="number" class="form-control mb-4"
+                                        placeholder="Phone Number">
+          
+                                    <!-- quantity -->
+                                    <input type="number" id="qu11" name="qu11" class="form-control mb-4" >
+          
+          
+                                    <!-- price -->
+                                    <input type="text" id="p2" class="form-control mb-4" name="p2"
+                                        placeholder="Price" value="900 per kilo"  aria-describedby="defaultRegisterFormPhoneHelpBlock" readonly>
+                                       
+                                        <input type="text" id="result1" class="form-control"  name="result1"
+                                        
+                                        placeholder="TOTAL COST" aria-describedby="defaultRegisterFormPhoneHelpBlock" readonly>
+          
+                                      
+                                           
+          
+                                    <!-- Sign up button -->
+                                    <button class="btn my-4 text-white color btn-block"   type="submit">Order</button>
+                                   
+                                    <hr style="background-color: white !important;">
+                                    <!-- Social register -->    
+                                    <a href="#" class="mx-2" role="button"><i class="fab fa-facebook-f light-blue-text"></i></a>
+                                    <a href="#" class="mx-2" role="button"><i class="fab fa-twitter light-blue-text"></i></a>
+                                    <a href="#" class="mx-2" role="button"><i class="fab fa-github light-blue-text"></i></a>
+                                    
+                                    
+                                  
+          
+                                </form>
+
+                              </div>
+                            </div>
+                        </div>
+
+    
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn text-white" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn text-white" data-target="add" name="btn1">Add To Cart</button>
+                        </div>
+                    </div>
+                </div>
+              </div>
+
+
+
+<div class="modal fade" id="myKOTE" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+  aria-hidden="true">
+
+  <!-- Add .modal-dialog-centered to .modal-dialog to vertically center the modal -->
+  <div class="modal-dialog modal-dialog-centered" role="document">
+
+
+      <div class="modal-content">
+          <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
           </div>
+                      <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-8 col-md-8 mx-auto  text-white text-center">
+                                    <h3 class="text-white text-bold">MD Fish</h3>
+                                    <img src="img/about/line.png" alt="" class="img-fluid">
+                                    <p class="text-white">LIVE WITH IT</p>
+                                    <p>order for...</p>
+                                    <h3 id="nameChange">KOTE</h3>
+          
+                                </div>
+                                <!-- Default form register -->
+                                <form  class="text-center border border-light p-5" action="#cartModal"  >
+          
+                                    <div class="form-row mb-4">
+                                        <div class="col">
+                                            <!-- First name -->
+                                            <input type="text" id="defaultRegisterFormFirstName"  name="firstname" class="form-control"
+                                                placeholder="First name">
+                                        </div>
+                                        <div class="col">
+                                            <!-- Last name -->
+                                            <input type="text" id="defaultRegisterFormLastName" name="lastname" class="form-control"
+                                                placeholder="Last name">
+                                        </div>
+                                    </div>
+          
+                                    <!-- mobile number -->
+                                    <input type="text" id="defaultRegisterPhonePassword" name="number" class="form-control mb-4"
+                                        placeholder="Phone Number">
+          
+                                    <!-- quantity -->
+                                    <input type="number" id="qu12" name="qu12" class="form-control mb-4" >
+          
+          
+                                    <!-- price -->
+                                    <input type="text" id="p2" class="form-control mb-4" name="p2"
+                                        placeholder="Price" value="400 per kilo"  aria-describedby="defaultRegisterFormPhoneHelpBlock" readonly>
+                                       
+                                        <input type="text" id="result2" class="form-control"  name="result2"
+                                        
+                                        placeholder="TOTAL COST" aria-describedby="defaultRegisterFormPhoneHelpBlock" readonly>
+          
+                                      
+                                           
+          
+                                    <!-- Sign up button -->
+                                    <button class="btn my-4 text-white color btn-block"   type="submit">Order</button>
+                                    <hr style="background-color: white !important;">
+                                    <!-- Social register -->    
+                                    <a href="#" class="mx-2" role="button"><i class="fab fa-facebook-f light-blue-text"></i></a>
+                                    <a href="#" class="mx-2" role="button"><i class="fab fa-twitter light-blue-text"></i></a>
+                                    <a href="#" class="mx-2" role="button"><i class="fab fa-github light-blue-text"></i></a>
+                                    
+                                    
+                                  
+          
+                                </form>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn text-white" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn text-white"  name="btn1">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+              </div>
+
+
+
+              
+<div class="modal fade" id="mySHAWA" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+aria-hidden="true">
+
+<!-- Add .modal-dialog-centered to .modal-dialog to vertically center the modal -->
+<div class="modal-dialog modal-dialog-centered" role="document">
+
+
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+                    <div class="modal-body">
+                      <div class="container">
+                          <div class="row">
+                              <div class="col-lg-8 col-md-8 mx-auto  text-white text-center">
+                                  <h3 class="text-white text-bold">MD Fish</h3>
+                                  <img src="img/about/line.png" alt="" class="img-fluid">
+                                  <p class="text-white">LIVE WITH IT</p>
+                                  <p>order for...</p>
+                                  <h3 id="nameChange">SHAWA</h3>
+        
+                              </div>
+                              <!-- Default form register -->
+                              <form class="text-center border border-light p-5" action="#cartModal"  >
+        
+                                  <div class="form-row mb-4">
+                                      <div class="col">
+                                          <!-- First name -->
+                                          <input type="text" id="defaultRegisterFormFirstName3"  name="firstname3" class="form-control"
+                                              placeholder="First name">
+                                      </div>
+                                      <div class="col">
+                                          <!-- Last name -->
+                                          <input type="text" id="defaultRegisterFormLastName3" name="lastname3" class="form-control"
+                                              placeholder="Last name">
+                                      </div>
+                                  </div>
+        
+                                  <!-- mobile number -->
+                                  <input type="text" id="defaultRegisterPhonePassword3" name="number3" class="form-control mb-4"
+                                      placeholder="Phone Number">
+        
+                                  <!-- quantity -->
+                                  <input type="number" id="qu13" name="qu13" class="form-control mb-4" >
+        
+        
+                                  <!-- price -->
+                                  <input type="text" id="p3" class="form-control mb-4" name="p3"
+                                      placeholder="Price" value="350 per kilo"  aria-describedby="defaultRegisterFormPhoneHelpBlock" readonly>
+                                     
+                                      <input type="text" id="result3" class="form-control"  name="result3"
+                                      
+                                      placeholder="TOTAL COST" aria-describedby="defaultRegisterFormPhoneHelpBlock" readonly>
+        
+                                    
+                                         
+        
+                                  <!-- Sign up button -->
+                                  <button class="btn my-4 text-white color btn-block"   type="submit">Order</button>
+                                  <hr style="background-color: white !important;">
+                                  <!-- Social register -->    
+                                  <a href="#" class="mx-2" role="button"><i class="fab fa-facebook-f light-blue-text"></i></a>
+                                  <a href="#" class="mx-2" role="button"><i class="fab fa-twitter light-blue-text"></i></a>
+                                  <a href="#" class="mx-2" role="button"><i class="fab fa-github light-blue-text"></i></a>
+                                  
+                                  
+                                
+        
+                              </form>
+                            </div>
+                          </div>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn text-white" data-dismiss="modal">Close</button>
+                          <button type="button" class="btn text-white" data-target="#cartModal" name="btn1">Order To Cart</button>
+                      </div>
+                  </div>
+              </div>
+            </div>
+
+
+
+                      <!-- Default form register for titus -->
+                      <script type="text/javascript" >
+                        $(document).ready(function() {
+                            $('#qu1').keyup(function(ev) {
+                                var total = $('#qu1').val() * 1;
+                                var tot_price = (total * 800);
+                                var divobj =  document.getElementById('result');
+                                divobj.value ="Naira" +" "+ tot_price;
+                            });
+                        });
+                    </script>
+
+                      <!-- Default form register for cat fish -->
+                      <script type="text/javascript" >
+                        $(document).ready(function() {
+                            $('#qu11').keyup(function(ev) {
+                                var total = $('#qu11').val() * 1;
+                                var tot_price = (total * 900);
+                                var divobj =  document.getElementById('result1');
+                                divobj.value ="Naira" +" "+ tot_price;
+                            });
+                        });
+                    </script>
+
+                      <!-- Default form register for kote -->
+                      <script type="text/javascript" >
+                        $(document).ready(function() {
+                            $('#qu12').keyup(function(ev) {
+                                var total = $('#qu12').val() * 1;
+                                var tot_price = (total * 400);
+                                var divobj =  document.getElementById('result2');
+                                divobj.value ="Naira" +" "+ tot_price;
+                            });
+                        });
+                    </script>
+
+                   <script type="text/javascript" >
+                         $(document).ready(function() {
+                        $('#qu13').keyup(function(ev) {
+                        var total = $('#qu13').val() * 1;
+                        var tot_price = (total * 400);
+                        var divobj =  document.getElementById('result3');
+                         divobj.value ="Naira" +" "+ tot_price;
+                               });
+                                   });
+                    </script>
+
+                    
+<div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+aria-hidden="true">
+
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <!--Header-->
+      <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel">Your cart <img src="img/cart.png" alt="" class="img-fluid"></h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
       </div>
+      <!--Body-->
+      <div class="modal-body">
+
+        <table class="table-hover">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Product name</th>
+              <th>Price</th>
+              <th>Remove</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Product 1</td>
+              <td>100NGN</td>
+              <td><a><i class="fas fa-times"></i></a></td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Product 2</td>
+              <td>100NGN</td>
+              <td><a><i class="fas fa-times"></i></a></td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>Product 3</td>
+              <td>100NGN</td>
+              <td><a><i class="fas fa-times"></i></a></td>
+            </tr>
+            <tr>
+              <th scope="row">4</th>
+              <td>Product 4</td>
+              <td>100NGN</td>
+              <td><a><i class="fas fa-times"></i></a></td>
+            </tr>
+            <tr class="total">
+              <th scope="row">5</th>
+              <td>Total</td>
+              <td>400NGN</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+      <!--Footer-->
+      <div class="modal-footer">
+        <button type="button" class="btn" data-dismiss="modal">Close</button>
+        <button class="btn btn-primary">Checkout</button>
+      </div>
+    </div>
   </div>
 </div>
+
+
 
   <!-- End Modal -->
 
@@ -465,6 +851,14 @@
   <!-- Copyright -->
 
 </footer>
+
+
+
+
+
+
+
+
 <script src="js/wow.min.js"></script>
 <script>
 new WOW().init();
@@ -490,16 +884,7 @@ new WOW().init();
     });
     var easeInQuart = new SmoothScroll('[data-easing="easeInQuart"]', {easing: 'easeInQuart'});
 </script>
-<script type="text/javascript">
-  function add_invoice(){
-    var q1 =parseInt(document.getElementById("qu1").nodeValue);
-    var p1 = parseInt(document.getElementById("p1").nodeValue);
-    var rs= q1*p1;
 
-    document.getElementById("result").nodeValue=rs;
-
-  }
-</script>
   <!-- Footer -->
   <!-- End your project here-->
   <script type="text/javascript" src="app.js"></script>
